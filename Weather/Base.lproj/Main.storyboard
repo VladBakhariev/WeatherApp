@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46H-uX-MM2">
+                                <rect key="frame" x="190.66666666666666" y="127" width="12" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="textColor" red="0.61739889339999998" green="0.40647508510000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="To6-T8-5n4">
+                                <rect key="frame" x="121.66666666666669" y="198" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5H5-lm-BCb"/>
+                                    <constraint firstAttribute="height" constant="150" id="hsw-Nd-yQA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-73-fKU">
+                                <rect key="frame" x="138" y="401" width="117" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get weather">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.89000000000000001" green="0.77481225190559555" blue="0.87032718365515682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ytj-73-fKU" firstAttribute="top" secondItem="To6-T8-5n4" secondAttribute="bottom" constant="53" id="9cm-eT-pie"/>
+                            <constraint firstItem="ytj-73-fKU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BSR-aK-8Zv"/>
+                            <constraint firstItem="46H-uX-MM2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="HCq-Ph-S6X"/>
+                            <constraint firstItem="To6-T8-5n4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kz5-UA-nve"/>
+                            <constraint firstItem="To6-T8-5n4" firstAttribute="top" secondItem="46H-uX-MM2" secondAttribute="bottom" constant="39" id="fIc-ui-ncg"/>
+                            <constraint firstItem="46H-uX-MM2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xi2-5M-i0x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getWeatherButton" destination="ytj-73-fKU" id="A2L-e6-U45"/>
+                        <outlet property="weatherLabel" destination="46H-uX-MM2" id="jmY-EC-BID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="512" height="512"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
